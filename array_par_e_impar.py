@@ -1,8 +1,8 @@
+par= []
+impar= []
+
 for i in range(15):
     n= int(input())
-
-    par= []
-    impar= []
 
     if len(par)==5:
         for j in par:
@@ -14,7 +14,16 @@ for i in range(15):
 
     if len(impar)==5:
         for k in impar:
-            print('par[',par.index(k),'] = ',k, sep='')
+            print('impar[',impar.index(k),'] = ',k, sep='')
+        impar.clear()
 
     if n%2 != 0:
         impar+= [n]
+
+if len(impar) > 0:
+    for l in impar:
+        print('impar[',impar.index(l),'] = ',l, sep='')
+
+if len(par) > 0:
+    for m in par:
+        print('par[',par.index(m),'] = ',m, sep='')
