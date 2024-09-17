@@ -1,0 +1,3 @@
+seque= input()
+base= input()
+
