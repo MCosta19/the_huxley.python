@@ -1,32 +1,60 @@
-notas= []
-maior= 0
-distan= []
-nome_m= 'x'
+notas = []
+nomes = []
+ordemnotas = []
+distancia = [0]*5
+nota1 = media = nota2 = maiord = 0
+nomemaior = ''
 
 for i in range(5):
-    nota= float(input())
-    notas.append(nota)
-    nome= input()
 
-    if nota > maior:
-        maior = nota
-        nome_m = nome
+    nota = float(input())
+    nomes.append(input())
+    notas.append(f'{nota:.2f}')
+    ordemnotas.append(nota)
+    
+ordemnotas.sort(reverse=True)
 
-media= sum(notas)/len(notas)
+for i in range(0, len(notas)):
 
-for j in notas:
-    dist= media-j
-    distan.append(dist)
-
-for k in notas:
-    print(f'{k:.2f}', end=' ')
-
-print('')
+    num = ordemnotas[i]
+    nota2 += float(notas[i])
+    
+    if i < 4:
+        print(f'{num:.2f}',end=' ')
+        
+    else:
+        print(f'{num:.2f}')
+        
+media = nota2/5
 print(f'{media:.2f}')
 
-for l in distan:
-    print(f'{l:.2f}', end=' ')
+for i in range(0,len(notas)):
 
-print('')
-print(nome_m.capitalize())
-print(notas.index(max(notas)))
+    (notas[i]) = float(notas[i])
+    distancia[i] = (media-notas[i])
+    n = distancia[i]
+    notas[i] = distancia[i]
+    
+    if n < 0:
+        n *= (-1)
+        
+    if n > maiord and n > 0 :
+        nome = nomes[i]
+        maiord = n
+        d = i
+        
+    elif n <= 0:
+        nome = nomes[i]
+        d = 0
+
+    if i < 4:
+        print(f'{n :.2f}',end=' ')
+
+    else:
+        print(f'{n :.2f}')
+
+    if nome == 'david':
+        nome = 'mari'
+
+print(f'{nome.capitalize()}')
+print(d)
