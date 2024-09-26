@@ -1,37 +1,21 @@
-#Ambrosio romantico
-
-n,e= input().split()
-
+n , e= input().split()
 n= int(n)
 e= int(e)
+lista= (input().split())
+saida= 'NAO'
 
-ideia= [int(x) for x in input().split()]
-    
-for i in ideia+[1]:
-    
-    if i>e:
-        ideia.remove(i)
-        
-for j in range(len(ideia)):
-    
-    if ideia>[]:
-        mini= min(ideia)
-        maxm= max(ideia)
-        
-        if maxm+mini>e or maxm+mini<e:
-            ideia.remove(min(ideia))
-            ideia.remove(max(ideia))
+for i in range(n):
+    p = int(lista[i])
+    soma = 0
 
-        else:
-            break
+    for j in lista:
+        q = int(j)
 
-    else:
-        break
 
-    
-if maxm+mini==e:
-    print('SIM')
+        if q != p:
+            soma = p + q
 
-elif ideia== []:
-    print('NAO')
-#print(ideia)
+        if soma == e:
+            saida = 'SIM'
+
+print(saida)
