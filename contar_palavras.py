@@ -1,4 +1,3 @@
-word= input()
-word_2= word.split(' ')
+word= input().split()
 
-print(len(word_2))
+print(len(word))
